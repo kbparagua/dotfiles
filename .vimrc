@@ -2,7 +2,6 @@ let mapleader=","
 set nocompatible
 filetype off
 
-
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -15,11 +14,20 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 filetype plugin indent on
 
+" https://github.com/altercation/vim-colors-solarized/issues/72#issuecomment-292697052
+" fix for vim-airline solarized theme
+set t_Co=256
 syntax enable
+let g:solarized_termtrans=1
+let g:solarized_termcolors=16
+let g:solarized_visibility="normal"
+let g:solarized_contrast="normal"
 set background=dark
 colorscheme solarized
 
@@ -33,6 +41,9 @@ set colorcolumn=120
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
+
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
 
 inoremap jj <ESC>
 map <C-n> :NERDTreeToggle<CR>
