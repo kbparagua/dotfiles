@@ -1,5 +1,5 @@
 # Change this
-export ZSH="/Users/kbparagua/.oh-my-zsh"
+export ZSH="$(echo ~)/.oh-my-zsh"
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
